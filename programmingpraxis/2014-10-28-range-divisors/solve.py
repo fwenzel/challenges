@@ -17,17 +17,25 @@ def range_divisors(x, y, n):
     return 1 + (y - first_div) // n
 
 
+def test(x, y, n, expect):
+    print "Are there %s numbers divisible by %s between %s and %s?" % (
+        expect, n, x, y)
+    if range_divisors(x, y, n) == expect:
+        print "Yup."
+    else:
+        print "Nope."
+    print
+
+
 def main():
     # Assert that this works. First one is simple:
-    print "There should be 3 numbers divisible by 5 between 8 and 20."
-    if range_divisors(x=8, y=20, n=5) == 3:
-        print "Yup."
+    test(x=8, y=20, n=5, expect=3)
 
     # This one is from the website.
-    print
-    print "There should be 14 numbers divisible by 7 between 100 and 200."
-    if range_divisors(x=100, y=200, n=7) == 14:
-        print "Yup."
+    test(x=100, y=200, n=7, expect=14)
+
+    # What about a negative range.
+    test(x=-200, y=-100, n=40, expect=2)
 
 
 if __name__ == '__main__':
