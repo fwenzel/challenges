@@ -6,7 +6,6 @@ This is a loose collection of solutions to various programming challenges that p
 
 In addition, I have separate repositories for other challenges such as:
 
-* [Project Euler](https://github.com/fwenzel/euler)
 * [Synacor OSCON Challenge](https://github.com/fwenzel/synacor-challenge)
 
 
